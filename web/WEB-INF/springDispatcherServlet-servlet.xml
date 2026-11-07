@@ -10,6 +10,11 @@
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" id="internalResourceViewResolver" >
         <property name="prefix" value="/WEB-INF/pages/" />
         <property name="suffix" value=".jsp" />
+<!--        <property name="order" value="9" />-->
+    </bean>
+
+    <bean class="org.springframework.web.servlet.view.BeanNameViewResolver">
+        <property name="order" value="99" />
     </bean>
 
     <mvc:annotation-driven />

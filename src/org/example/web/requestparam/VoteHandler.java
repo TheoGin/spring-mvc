@@ -89,4 +89,5 @@ public class VoteHandler {
     public void prepareModel() {
         System.out.println("@ModelAttribute 的 prepareModel 方法执行了");
     }
+
 }
