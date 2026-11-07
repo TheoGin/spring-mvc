@@ -4,6 +4,6 @@
         <title>登录成功</title>
     </head>
     <body>
-        <h1>恭喜登录成功!</h1>
+        <h1>恭喜${requestScope.username}登录成功!</h1>
     </body>
 </html>
