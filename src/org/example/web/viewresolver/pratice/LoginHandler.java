@@ -12,19 +12,20 @@ import javax.servlet.http.HttpServletResponse;
 @RequestMapping("/user")
 public class LoginHandler {
 
-    /* @RequestMapping("/login")
+    @RequestMapping("/login")
     public String doLogin(User user, HttpServletRequest request, HttpServletResponse response) {
         System.out.println("========登录 login===========");
 
-        request.setAttribute("username", user.getUsername());
-        request.setAttribute("password", user.getPassword());
+        // 默认会把 user 对象放在 request 域中
+        // request.setAttribute("username", user.getUsername());
+        // request.setAttribute("password", user.getPassword());
 
         if("sopho".equals(user.getUsername()) && "123".equals(user.getPassword())) {
-            return "login_ok";
+            return "forward:/WEB-INF/pages/login_ok.jsp";
         }
-        return "login_error";
-    } */
-    @RequestMapping("/login")
+        return "forward:/WEB-INF/pages/login_error.jsp";
+    }
+    /* @RequestMapping("/login")
     public ModelAndView doLogin(User user, HttpServletRequest request, HttpServletResponse response) {
         System.out.println("========登录 login===========");
         ModelAndView modelAndView = new ModelAndView();
@@ -38,5 +39,5 @@ public class LoginHandler {
         }
 
         return modelAndView;
-    }
+    } */
 }

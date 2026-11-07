@@ -11,8 +11,9 @@
         <title>Title</title>
     </head>
     <body>
-        <h1>${requestScope.username}登录失败，请重新登录</h1>
-        <a href="/spring_mvc/login.jsp">返回登录页面</a>
+        <h1>${requestScope.user.username}登录失败，请重新登录</h1>
+        <%-- <a href="/spring_mvc/login.jsp">返回登录页面</a> --%>
+        <a href="<%=request.getContextPath()%>/login.jsp">返回登录页面</a>
         <p>登录!</p>
     </body>
 </html>

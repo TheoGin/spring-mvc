@@ -11,7 +11,8 @@
         2. action="/login" 表示的url 是 http://localhost:8080/login
         --%>
 
-        <form action="user/login">
+        <%-- <form action="user/login"> --%>
+        <form action="<%=request.getContextPath()%>/user/login">
             u:<input name="username" type="text"> <br/>
             p:<input name="password" type="password"><br/>
             <input type="submit" value="登录">
