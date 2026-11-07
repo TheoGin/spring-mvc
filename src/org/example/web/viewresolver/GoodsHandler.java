@@ -13,4 +13,12 @@ public class GoodsHandler {
 
         return "myView";
     }
+
+    @RequestMapping("/order")
+    public String order() {
+        System.out.println("========购买商品 order===========");
+
+        // return "forward:/WEB-INF/pages/my_view.jsp";
+        return "redirect:/login.jsp";
+    }
 }
